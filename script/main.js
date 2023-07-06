@@ -24,23 +24,33 @@ function submitClicked(){
       salary : salary
    }   
 
-   // Create a Row.
-   var row = customerTable.insertRow(0);
+   let row = 
+   `<tr>` +
+      `<td>1</td>`+
+      `<td>${customer.name}</td>`+
+      `<td>${customer.address}</td>`+
+      `<td>${customer.salary}</td>`+
+   `</tr>`
 
-   //Creating the number cell
-   var numberCell = row.insertCell(0);
-   numberCell.innerText = 1;
+   customerTable.innerHTML = customerTable.innerHTML + row;
 
-   // Creating the name cell
-   var nameCell = row.insertCell(1);
-   nameCell.innerText = customer.name;
+   // // Create a Row.
+   // var row = customerTable.insertRow(0);
 
-   //Creating the address cell.
-   var addressCell = row.insertCell(2);
-   addressCell.innerText = customer.address;
+   // //Creating the number cell
+   // var numberCell = row.insertCell(0);
+   // numberCell.innerText = 1;
 
-   //Creating the salary cell
-   var salaryCell = row.insertCell(3);
-   salaryCell.innerText = customer.salary;
+   // // Creating the name cell
+   // var nameCell = row.insertCell(1);
+   // nameCell.innerText = customer.name;
+
+   // //Creating the address cell.
+   // var addressCell = row.insertCell(2);
+   // addressCell.innerText = customer.address;
+
+   // //Creating the salary cell
+   // var salaryCell = row.insertCell(3);
+   // salaryCell.innerText = customer.salary;
 
 }
