@@ -10,16 +10,17 @@ const customerSalaryPrinted = document.getElementById("customerSalaryPrinted");
 
 
 function submitClicked(){
-   console.log(customerName.value,customerAddress.value,customerSalary.value);
-
-   // Setting on web page
+   
    let name = customerName.value;
    let address = customerAddress.value;
    let salary = customerSalary.value;
 
-   customerNamePrinted.innerText = name;
-   customerAddressPrinted.innerText = address;
-   customerSalary.innerText = salary;
+   const customer = {
+      name : name,
+      address : address,
+      salary : salary
+   }
 
+   console.log(customer);
 
 }
