@@ -3,6 +3,9 @@ const customerName = document.getElementById("customerName");
 const customerAddress = document.getElementById("customerAddress");
 const customerSalary = document.getElementById("customerSalary");
 
+//Table
+const customerTable = document.getElementById("customerTable");
+
 // h3 element
 const customerNamePrinted = document.getElementById("customerNamePrinted");
 const customerAddressPrinted = document.getElementById("customerAddressPrinted");
@@ -19,8 +22,25 @@ function submitClicked(){
       name : name,
       address : address,
       salary : salary
-   }
+   }   
 
-   console.log(customer);
+   // Create a Row.
+   var row = customerTable.insertRow(0);
+
+   //Creating the number cell
+   var numberCell = row.insertCell(0);
+   numberCell.innerText = 1;
+
+   // Creating the name cell
+   var nameCell = row.insertCell(1);
+   nameCell.innerText = customer.name;
+
+   //Creating the address cell.
+   var addressCell = row.insertCell(2);
+   addressCell.innerText = customer.address;
+
+   //Creating the salary cell
+   var salaryCell = row.insertCell(3);
+   salaryCell.innerText = customer.salary;
 
 }
